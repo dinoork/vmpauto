@@ -1,0 +1,67 @@
+.header {
+    
+    &__main-part {
+        position: relative;
+
+        @include respond(tab-land) {
+            padding: 0 2rem;
+        }
+        
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__heading {
+        margin-bottom: .5rem;
+        margin-top: 2rem;
+
+        @include respond(tab-port) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__news {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5rem;
+        max-width: 35rem;
+        background-color: $color-white;
+        padding: 3.5rem 3.5rem 3rem 3.5rem;
+
+        @include respond(tab-land) {
+            padding: 2.5rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: $color-black;
+        text-decoration: none;
+        transition: color .2s;
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: $color-secondary;
+    }
+
+    &__link-small:link,
+    &__link-small:visited {
+        text-decoration: none;
+        color: $color-black;
+        display: block;
+        margin-bottom: 4.5rem;
+    }
+
+    &__link-small:hover,
+    &__link-small:active {
+        color: $color-secondary;        
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

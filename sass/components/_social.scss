@@ -1,0 +1,53 @@
+.social {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__icon {
+        width: 3rem;
+    
+        @include respond(tab-port) {
+            margin-top: 2rem;
+            width: 4rem;
+        }
+    }
+
+    
+}
+
+
+
+.date {
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-land) {
+        font-size: 2.4rem;
+    }
+
+    &__icon {
+        align-self: flex-end;
+        width: 1rem;
+        margin-right: .5rem;
+        fill: $color-gray-light-2;
+        align-self: stretch;
+        height: 3rem;
+
+        @include respond(tab-land) {
+            width: 1.5rem;
+            height: 3rem;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        color: $color-gray-light-2;
+    }
+}

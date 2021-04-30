@@ -1,0 +1,77 @@
+.video {
+    position: relative;
+
+    &__heading {
+        font-size: 3rem;
+        max-width: 70%;
+        margin-bottom: 3rem;
+
+
+        @include respond(tab-port) {
+            margin: 0 auto;
+            margin-bottom: 5rem;
+            padding-left: 1rem;    
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content:  space-between;
+
+        @include respond(tab-land) {
+            flex-wrap: wrap;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__item {
+        flex: 1;
+        
+        &:not(:last-child){
+            margin-right: 5rem;
+        }
+
+
+        @include respond(tab-land) {
+            flex: 0 0 40%;
+            margin-bottom: 4rem;         
+
+            &:not(:last-child){
+                margin-right: 0;
+            }        
+        }
+
+        @include respond(tab-port) {
+            margin-bottom: 6rem;            
+        }
+    }
+
+    &__sublink:link,
+    &__sublink:visited {
+        display: inline-block;
+        margin-top: .5rem;
+        text-decoration: none;
+        color: $color-gray-dark-1;
+        font-size: 1.5rem;
+        transition: color .2s;
+
+        @include respond(tab-land) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__sublink:hover,
+    &__sublink:active {
+        color: $color-secondary;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 2rem;
+        margin-bottom: 1rem;
+    }
+}

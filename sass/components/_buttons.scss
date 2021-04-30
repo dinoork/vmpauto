@@ -1,0 +1,58 @@
+.btn {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    display: inline-block;
+
+
+    &:link,
+    &:visited {
+        padding: 1rem 2rem;
+        color: $color-white;
+        text-decoration: none;
+        background-color: $color-primary;
+        border-radius: 1px;
+        font-size: 1.6rem;
+        transition: opacity .2s;
+        
+        @include respond(tab-port) {
+            font-size: 2.4rem;
+        }
+    }
+
+
+    &:hover,
+    &:active {
+        opacity: .7;
+    }
+
+    &--gray:link,
+    &--gray:visited {
+
+        margin-left: 1rem;
+        color: $color-black;
+        background-color: $color-gray-light-1;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+
+    &--red:link,
+    &--red:visited {
+        padding: 1rem 3rem;
+        color: $color-secondary;
+        text-transform: uppercase;
+        border: $line;
+        background-color: transparent;
+        transition: background-color .2s;
+    }
+
+
+    &--red:hover,
+    &--red:active {
+        background-color: $color-secondary;
+        color: $color-white;
+    }
+}

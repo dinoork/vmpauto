@@ -1,0 +1,101 @@
+.cta {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10rem;
+    }
+
+    @include respond(phone) {
+        padding: 0 5rem;
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: $color-secondary;
+        margin-right: 1rem;
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 5rem;
+
+        @include respond(tab-port) {
+            margin-right: 0;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+    }
+
+
+    &__heading-block {
+        display: flex;
+        
+        @include respond(tab-port) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__heading {
+        font-weight: 400;
+
+
+        @include respond(tab-port) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__description {
+        font-weight: 200;
+    }
+
+    &__btn:link,
+    &__btn:visited {
+        background-color: $color-secondary;
+        color: $color-white;
+        transition: transform .2s;
+        display: inline-block;
+
+        @include respond(tab-port) {
+            font-size: 1.8rem;
+            padding: 1rem 3.5rem;
+        }
+    }
+
+    &__btn:hover,
+    &__btn:active {
+        transform: translateY(-2px);
+        opacity: 1;
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        border: 0;
+        flex: 0 0 35%;
+        padding: .9rem;
+        margin-right: 3rem;
+
+        &:focus {
+            outline: none;
+        }
+
+                
+        @include respond(tab-port) {
+            margin-bottom: 3rem;
+            width: 70%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,135 @@
+.footer {
+    padding: 5rem 0;
+    font-size: 1.4rem;
+    
+    @include respond(tab-land) {
+        padding: 5rem 2rem;
+        font-size: 1.7rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 1.9rem;
+        padding: 5rem 6rem;
+    }
+    
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        list-style: none;
+        flex: 0 0 30%;
+        margin-bottom: 4rem;
+
+
+        @include respond(phone) {
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-black;
+        transition: color .2s;
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: $color-secondary;
+    }
+
+    &__img {
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+    
+    &__book {
+        
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__bottom {
+        color: $color-gray-dark-1;
+    }
+
+    &__bottom .hidden {
+        display: none;
+
+        @include respond(tab-port) {
+            display: inline-block;
+        }
+    }
+
+    &__bottom-link:link,
+    &__bottom-link:visited {
+        color: $color-gray-dark-1;
+        text-decoration: none;
+        margin-right: 2rem;
+
+        @include respond(phone) {
+            margin-bottom: 2rem;
+            margin-right: 0;
+            display: block;
+        }
+    }
+
+    &__bottom-link:hover,
+    &__bottom-link:active {
+        color: $color-secondary;
+    } 
+
+    &__iso {
+        display: flex;
+        align-items: center;
+    }
+
+    &__bottom-text {
+        flex: 0 0 50%;
+
+
+        @include respond(tab-port) {
+            flex: 0 0 70%;
+        }
+
+        @include respond(phone) {
+            flex: 1;
+        }
+    }
+
+    &__bottom-img {
+        @include respond(phone) {
+            display: none;
+        }
+    }
+}

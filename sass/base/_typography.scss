@@ -1,0 +1,30 @@
+
+body {
+    font-family: "Lato", 'Roboto';
+    font-weight: 400;
+    /*font-size: 16px;*/
+    color: $color-black;
+}
+
+
+.heading-primary {
+   
+}
+
+
+.heading-secondary {
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.2em; 
+}
+
+
+.heading-tertiary {
+    font-weight: 100;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+}

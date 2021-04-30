@@ -1,0 +1,96 @@
+.news {
+    margin-top: 2rem;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        
+        @include respond(tab-land) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            max-width: 45%;
+            display: none;
+        }
+    }
+
+    &__item {
+        flex: 1;
+
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+
+        @include respond(tab-land) {
+            flex: 0 0 45%;
+
+            &:not(:last-child){
+                margin-right: 0rem;
+            }
+
+            margin-bottom: 5rem;
+        }
+    
+        @include respond(tab-port) {
+            margin-bottom: 10rem;
+        }
+    }
+
+    &__sublink:link,
+    &__sublink:visited {
+        font-weight: 500;
+        font-size: 1.6rem;
+        display: inline-block;
+        margin-top: .5rem;
+        text-decoration: none;
+        color: $color-black;
+        transition: color .2s, opacity .2s;
+
+
+        @include respond(tab-land) {
+            font-size: 2.4rem;
+        }
+
+    }
+
+    &__sublink:hover,
+    &__sublink:active {
+        color: $color-secondary;
+        opacity: .7;
+    }
+
+    &__img {
+        margin-bottom: 1rem;
+        width: 100%;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    &__buttons {
+        margin-top: 5rem;
+        font-size: 1.8rem;
+
+        @include respond(tab-land) {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+
+        @include respond(tab-port) {
+            max-width: 50%;
+            margin-bottom: 10rem;
+        }
+
+        @include respond(phone) {
+            max-width: 65%;
+            margin-bottom: 10rem;
+        }
+    }
+}

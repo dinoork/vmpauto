@@ -1,0 +1,49 @@
+.clean {
+
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    &__title {
+        font-weight: 400;
+    }
+
+    &__main {
+        display: flex;        
+    }
+
+    &__video {
+        overflow: visible;
+        margin-left: -10.5rem;
+    }
+
+    &__middle {
+        background: url(../img/velcro-banner-side-min.png);
+        background-size: 4px;
+        width: 4px;
+    }
+
+    &__right {
+        flex: 1;
+        position: relative;
+        background: url(../img/front-velcro.jpg);
+        background-size: cover;
+    }
+
+    &__content {
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+        background-color: rgba($color-white, .85);
+        max-width: 60rem;
+        padding: 4.2rem;
+    }
+
+    &__text {
+        margin-bottom: 3rem;
+    }
+
+    &__btn {
+        font-size: 1.8rem;
+    }
+}
